@@ -14,7 +14,7 @@ function authenticationMiddleware(req, res, next) {
 
         if (verifyTokenResult instanceof Error) {
             const status = 401;
-            const message = 'Token de autenticação not found';
+            const message = 'Token de autenticação não encontrado';
             res.status(status).json({ status, message });
             return;
         }
